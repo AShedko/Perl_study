@@ -6,6 +6,7 @@ open(my $fh, "<", "out")
 or die "Can't open < out: $!";
 my @AoA;
 while ($_=<$fh>) {
+    chomp;
     my @tmp = split(/;/);
     push @AoA, [ @tmp ];
 }
